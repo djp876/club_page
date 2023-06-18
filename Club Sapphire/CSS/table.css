@@ -1,0 +1,33 @@
+h3{
+    color:#1d2147;
+}
+table,tr,td,th{ 
+    padding:5px;
+    text-align: start;
+    line-height: 1.4;
+}
+table{
+    border-spacing: 20px;
+}
+td,th{
+    padding:15px;
+    border-radius:10px;
+}
+tr{
+    background-color: #707697;
+}
+tr:nth-child(odd){
+    color:white;
+}
+tr:nth-child(even){
+    background-color: rgb(177, 205, 230);
+}
+tr:nth-child(even):hover{
+    background-color: rgb(166, 204, 238);
+}
+tr:nth-child(odd):hover{
+    background-color: #575c76;
+}
+h3{
+    text-align: center;
+}

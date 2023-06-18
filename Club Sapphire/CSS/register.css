@@ -1,0 +1,28 @@
+.register-div{
+    padding:0 10px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height: 150px;
+}
+.register-div > a{
+  display:block;
+  background-color: #1d2147;
+  padding:10px;
+  border-radius:25px;
+  text-decoration: none;
+  color:white;
+  width: 100px;
+  text-align: center;
+}
+.register-div > a:hover{
+  background-color: #42445A;
+}
+.icon-right,.icon-left{
+  height:35px;
+}
+@media(max-width:560px){
+  .register-div h2{
+    font-size: 10px;
+  }
+}

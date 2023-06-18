@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="./CSS/Header.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- #9f968a -->
+    <style>
+        .form{
+            margin:0 auto;
+            width:50vw;
+        }
+        legend{
+            border:3px solid #9f968a;
+            padding:10px;
+            border-radius: 15px;
+            letter-spacing: 1.5px;
+        }
+        
+        .field{
+            border:3px solid #9f968a;
+            border-radius: 15px;
+            padding:10px;
+        }
+        .basic input[type="text"]{
+            border-radius: 15px;
+            padding:5px;
+            background-color: #ECEFF1;
+            border:3px solid #9f968a;
+        }
+        .extend{
+            width: 90%;
+        }
+        table,td,tr{
+            width:90%;
+            padding:5px;
+           
+        }
+        input[type="radio"]{
+            margin:10px;   
+        }
+        .intrests td{
+            width:90px;
+        }
+        .intrests th{
+            font-size: 12px;
+            text-align: start;
+        }
+        .event-option-box{
+            display: flex;
+            align-items: center;
+        }
+        .event-option-box input{
+            display: block;
+
+        }
+        .btn{
+            padding:10px;
+            background-color: #1d2147;
+            color:white;
+            font-weight: bold;
+            border-radius: 15px;
+            border:none;
+            text-align: center;
+            transition: all 400ms ease-in-out;
+            width:200px;
+        }
+        .btn-box{
+            text-align: center;
+        }
+        .btn:hover{
+            transform: translateY(-5px);
+            box-shadow: 2px 3px 10px black;
+        }
+        @media  (max-width:800px){
+                .extend{
+                width:150px;
+            }
+            .form{
+                width:90vw;
+                margin:10;
+            }
+            
+        }
+        @media (max-width:500){
+            .field{
+                width:350px;
+                margin:10 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <div><img class="logo" src="./Images/aicte.png" alt="AICTE logo"></div>
+        <div id="header-content">
+            <h2 id="heading">RVR & JC <br>College of Engineering (Autonomous)
+                <br>AICTE SPICES</h2> 
+            <h5>(Scheme for Promoting Interests, Creativity & Ethics among Students)</h5>
+        </div>
+        <div><img class="logo" src="./Images/rvrjc.png" alt="RVRJC logo"></div>
+    </div>
+    <!-- navigation links -->
+    <div class="nav-bar">
+        <div class="nav-container">
+          <div class="link-container">
+            <div class="link">
+              <a href="./index.html"><img class="icon" src="./Images/home.png" alt="home" > </a>
+                      <span class="tool-text">Home</span>
+            </div>
+          </div>
+          <div class="link-container">
+            <div class="link">
+              <a href="./committee.html"><img class="icon" src="./Images/committee.png" alt="committe"> </a>
+             <span class="tool-text">Committee</span>
+            </div>
+          </div>
+          <div id="events-show">
+          <div class="link-container">
+            <div class="link">
+              <img src="./Images/event.png" alt="" class="icon">
+                      <span class="tool-text">Events</span>
+            </div>
+          </div>
+          <div class="events">
+            <div class="link-container event-link-container">
+              <div class="link">
+                <a href="./completed-events.html"><img src="./Images/event1.png" alt="" class="icon"></a>
+                <span class="tool-text">Organised</span>
+              </div>
+            </div>
+            <div class="link-container event-link-container">
+              <div class="link">
+                <a href="./upcoming-events.html"><img src="./Images/event2.png" alt="" class="icon"></a>
+                <span class="tool-text">Upcoming</span>
+              </div>
+            </div>
+          </div>
+           </div>
+          <div class="link-container">
+            <div class="link">
+              <a href="./register.html"><img src="./Images/regitser.png" alt="" class="icon"></a>
+                      <span class="tool-text">Register</span>
+            </div>
+          </div>
+          <div class="link-container">
+            <div class="link">
+              <a href="./gallery.html"><img src="./Images/gallery.png" alt="" class="icon"></a>
+                      <span class="tool-text">Gallery</span>
+            </div>
+          </div>
+          <div class="link-container">
+            <div class="link">
+              <a href="./feedback.html"><img src="./Images/feedback.png" alt="" class="icon"></a>
+                      <span class="tool-text">Contact</span>
+            </div>
+          </div>
+          <div class="link-container">
+            <div class="link">
+              <a href="./contact.html"><img src="./Images/contact.png" width="32" alt="" class="icon"></a>
+                      <span class="tool-text">Contact</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <br>
+    <div clss="feedback_container">
+        <div class="form">
+            <!-- <form name="google-sheet" action="https://club-saphire-api.onrender.com/addresponse" target="_blank" method="POST"></form> -->
+            <form action="https://script.google.com/macros/s/AKfycbygmL1tYIoa_phonK5qC146O73ev0Owy7HcLJdf2-Y/dev" method="POST" target="_blank" name="google-sheet">
+                <fieldset class="basic field">
+                    <legend align="center">BASIC INFORMATION</legend>
+                    <table>
+                        <tr>
+                            <td>Name</td>
+                            <td>Regd No</td>
+                        </tr>
+                        <tr>
+                            <td><input class="extend" type="text" name="Name" required></td>
+                            <td><input type="text" name="Regd. No" required></td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><label><input type="radio" value="Male" name="Gender" required>Male </label><label><input type="radio" value="Female" name="Gender" required>Female</label></td>
+                        </tr>
+                    </table>
+                  </fieldset>
+                  <br><br>   
+
+                  <fieldset class="field event-items">
+                    <h4>What events did you find the most useful
+                        or enjoyable?</h4>
+                        <br>
+                  </fieldset>
+                  <br>
+                  <br>
+                  <fieldset class="field event-items">
+                    <h4>Participation in the events of CLUB SAPPHIRE promoted the
+                        following
+                        </h4>
+                        <br>
+                        <label><input type="radio" value="Interests" name="Participation in the events of CLUB SAPPHIRE promoted the following"> Interests</label><br>
+                        <label><input type="radio" value="Creativity" name="Participation in the events of CLUB SAPPHIRE promoted the following"> Creativity</label><br>
+                        <label><input type="radio" value="Ethical thinking" name="Participation in the events of CLUB SAPPHIRE promoted the following"> Ethical thinking</label><br>
+                        <label><input type="radio" value="None of these" name="Participation in the events of CLUB SAPPHIRE promoted the following"> None of these</label><br>
+                  </fieldset>
+                  <br><br>
+                  <fieldset class="field intrests">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>4-Very much satisfied</th>
+                            <th>3-Satisfied</th>
+                            <th>2-Neutral</th>
+                            <th>1-Not satisfied</th>
+                        </tr>
+                        <tr>
+                            <td>Accomodation</td>
+                            <td><label><input required type="radio" value="4-Very much satisfied" name="How satisfied were you with the logistics? [Accommodation]"></label></td>
+                            <td><label><input required type="radio" value="3-Satisfied" name="How satisfied were you with the logistics? [Accommodation]"></label></td>
+                                <td><label><input required type="radio" value="2-Neutral" name="How satisfied were you with the logistics? [Accommodation]"></label></td>
+                            <td><label><input required type="radio" value="1-Not satisfied" name="How satisfied were you with the logistics? [Accommodation]"></label></td>
+                        </tr>   
+                        <tr>
+                            <td>Welcome Formality</td>
+                            <td><label><input required type="radio" value="4-Very much satisfied" name="How satisfied were you with the logistics? [Welcome Formality]"></label></td>
+                            <td><label><input required type="radio" value="3-Satisfied" name="How satisfied were you with the logistics? [Welcome Formality]"></label></td>
+                                <td><label><input required type="radio" value="2-Neutral" name="How satisfied were you with the logistics? [Welcome Formality]"></label></td>
+                            <td><label><input required type="radio" value="1-Not satisfied" name="How satisfied were you with the logistics? [Welcome Formality]"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Mail Communication</td>
+                            <td><label><input required type="radio" value="4-Very much satisfied" name="How satisfied were you with the logistics? [Mail Communication]"></label></td>
+                            <td><label><input required type="radio" value="3-Satisfied" name="How satisfied were you with the logistics? [Mail Communication]"></label></td>
+                                <td><label><input required type="radio" value="2-Neutral" name="How satisfied were you with the logistics? [Mail Communication]"></label></td>
+                            <td><label><input required type="radio" value="1-Not satisfied" name="How satisfied were you with the logistics? [Mail Communication]"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Transportation</td>
+                            <td><label><input required type="radio" value="4-Very much satisfied" name="How satisfied were you with the logistics? [Transportation]"></label></td>
+                            <td><label><input required type="radio" value="3-Satisfied" name="How satisfied were you with the logistics? [Transportation]"></label></td>
+                                <td><label><input required type="radio" value="2-Neutral" name="How satisfied were you with the logistics? [Transportation]"></label></td>
+                            <td><label><input required type="radio" value="1-Not satisfied" name="How satisfied were you with the logistics? [Transportation]"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Venue</td></label></td>
+                            <td><label><input required type="radio" value="4-Very much satisfied" name="How satisfied were you with the logistics? [Venue]"></label></td>
+                            <td><label><input required type="radio" value="3-Satisfied" name="How satisfied were you with the logistics? [Venue]"></label></td>
+                                <td><label><input required type="radio" value="2-Neutral" name="How satisfied were you with the logistics? [Venue]"></label></td>
+                            <td><label><input required type="radio" value="1-Not satisfied" name="How satisfied were you with the logistics? [Venue]"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Activities</td>
+                            <td><label><input required type="radio" value="4-Very much satisfied" name="How satisfied were you with the logistics? [Activities]"></label></td>
+                            <td><label><input required type="radio" value="3-Satisfied" name="How satisfied were you with the logistics? [Activities]"></label></td>
+                                <td><label><input required type="radio" value="2-Neutral" name="How satisfied were you with the logistics? [Activities]"></label></td>
+                            <td><label><input required type="radio" value="1-Not satisfied" name="How satisfied were you with the logistics? [Activities]"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Speakers</td>
+                            <td><label><input required type="radio" value="4-Very much satisfied" name="How satisfied were you with the logistics? [Speakers]"></label></td>
+                            <td><label><input required type="radio" value="3-Satisfied" name="How satisfied were you with the logistics? [Speakers]"></label></td>
+                            <td><label><input required type="radio" value="2-Neutral" name="How satisfied were you with the logistics? [Speakers]"></label></td>
+                            <td><label><input required type="radio" value="1-Not satisfied" name="How satisfied were you with the logistics? [Speakers]"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Overall Rating</td>
+                            <td><label><input required type="radio" value="4-Very much satisfied" name="Overall, how would you rate the event?"></label></td>
+                            <td><label><input required type="radio" value="3-Satisfied" name="Overall, how would you rate the event?"></label></td>
+                            <td><label><input required type="radio" value="2-Neutral" name="Overall, how would you rate the event?"></label></td>
+                            <td><label><input required type="radio" value="1-Not satisfied" name="Overall, how would you rate the event?"></label></td>
+                        </tr>
+                    </table>
+                  </fieldset>
+                  <br>
+                  <br>
+                  <fieldset class="field">
+                    Would you like to hear about similar events in the future?<br>
+                    <label><input type="radio" name="Would you like to hear about similar events in the future?" value="YES">YES</label>
+                    <label> <input type="radio" name="Would you like to hear about similar events in the future?" value="NO"> NO</label>
+                  </fieldset>
+                  <br>
+                  <br>
+                    <div class="btn-box"><button class="btn"  type="submit" value="Submit">SUBMIT</div>
+                  
+            </form>
+        </div>  
+    </div>
+    <br>
+    
+
+    <br>
+    <script>
+        let events = ["A. Club Sapphire’s Inaugural Ceremony with Yoga Promo dated 21-06-2022",
+"B. Contemporary Choreography on 'Oneness in Diversity' dated 11-08-2033Pms",
+"C. Online Quiz Competition in honour of Azadi Ka Amrit Mahotsav dated 11-08-2033",
+"D. Face Painting and Pencil Shading Competitions dated 17-08-2022Headaches",
+"E. General Quiz Competition dated 24-08-2022Flu",
+"F. Dance Competitions in a) Western (both solo & group) b) Folk (both solo & group) c) Old is Gold (both solo & group) d) Classical (both solo & group) e) Jodi Round on 29-08-2022 & 09-09-2022",
+"G. Eco-friendly Ganesh Idol Display with a pep talk on the conservation of nature and resources dated 29-08-2022",
+"H. JAM Competition dated 05-09-2022",
+"I. a) Creative Model on Environmental Issues b) Group Discussion on Ethics for Engineering Graduates",
+"c) Paper Presentation on Universal Human Values d) Cultural Display during Dussehra Celebrations on 13-09-2022",
+"J. a) Competitions in i. Rangoli ii. Pencil Shading iii. Mehndi; b) Guest Lecture on Teaching-Learning with respect to Outcome Based Education; c) Guest Lecture on “Ethics and Human Values from 26-10- 2022 to 28-10-2022",
+"K. Guest lecture on self exploration and development on 08-11-22",
+"L. Skit & Mime in groups on 24-11-22",
+"M. Short Film Competition on 03-12-22",
+"N. Czars-2023 dated 11-02-23"]
+let eventField = document.querySelector(".event-items");
+events.forEach(function(event){
+    eventField.innerHTML+=`<div>
+            <label>
+                <div class="event-option-box">
+                <input required type="radio" value="${event}" name="What events did you find the most useful or enjoyable?">
+                <div>${event}</div>
+                </div>
+            </label>
+        </div>
+        <br>`
+})
+
+            // const scriptURL = 'https://script.google.com/macros/s/AKfycbza5F485jb5-JnONQjOh35AYzjkzjolDd1AdSroltsDNmyXhz_sv2ozxd5qimct1sYu/exec'
+            // const form = document.forms['google-sheet']
+          
+            // form.addEventListener('submit', e => {
+            //   e.preventDefault()
+            //   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            //     .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+            //     .catch(error => console.error('Error!', error.message))
+            // })
+          
+    </script>
+</body>
+</html>

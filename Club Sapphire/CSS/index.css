@@ -1,0 +1,23 @@
+.head{
+    margin-top:30px;
+}
+.bg-logo{
+  display:block;
+  margin-left:70vw;
+  margin-top: -80px;
+  
+}
+
+@media (max-width:1250px){
+  .bg-logo{
+    margin-left:50vw;
+  margin-top: -100px;
+}
+}
+@media (max-width:630px){
+  .bg-logo{
+    margin:0 auto;
+    margin-top:-60px;
+}
+
+}

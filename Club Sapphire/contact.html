@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLUB SAPPHIRE</title>
+    <link rel="stylesheet" href="./CSS/Header.css">
+    <style>
+      .media-container{
+        margin:30px 0;
+        width:400px;
+      }
+      .media-icon{
+        height:60px;
+      }
+      .phone,.mail{
+        margin-top: 20px;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+      }
+      .phone{
+        column-gap: 5px;
+      }
+      .phone div,.mail div{
+        width:100%;
+        height:100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .detail{
+        line-height: 1.7;
+      }
+      .c-2{
+        grid-column: span 2;
+        justify-content: end;
+      }
+      @media(max-width:700px){
+        .media-container{
+          font-size: 11px;
+        }
+        .media-icon{
+        height:50px;
+      }
+      .media-container{
+        width:300px;
+      }
+      }
+    </style>
+</head>
+<body>
+    <!-- header  -->
+    <div id="header">
+        <div><img class="logo" src="./Images/aicte.png" alt="AICTE logo"></div>
+        <div id="header-content">
+            <h2 id="heading">RVR & JC <br>College of Engineering (Autonomous)
+                <br>AICTE SPICES</h2> 
+            <h5>(Scheme for Promoting Interests, Creativity & Ethics among Students)</h5>
+        </div>
+        <div><img class="logo" src="./Images/rvrjc.png" alt="RVRJC logo"></div>
+    </div>
+   <!-- navigation links -->
+    <div class="nav-bar">
+        <div class="nav-container">
+          <div class="link-container">
+            <div class="link">
+              <a href="./index.html"><img class="icon" src="./Images/home.png" alt="home" > </a>
+                      <span class="tool-text">Home</span>
+            </div>
+          </div>
+          <div class="link-container">
+            <div class="link">
+              <a href="./committee.html"><img class="icon" src="./Images/committee.png" alt="committe"> </a>
+             <span style="margin-left:-8px" class="tool-text">Committee</span>
+            </div>
+          </div>
+          <div id="events-show">
+          <div class="link-container">
+            <div class="link">
+              <img src="./Images/event.png" alt="" class="icon">
+                      <span class="tool-text">Events</span>
+            </div>
+          </div>
+          <div class="events">
+            <div class="link-container">
+              <div class="link">
+                <a href="./completed-events.html"><img src="./Images/event1.png" alt="" class="icon"></a>
+                <span class="tool-text">Completed</span>
+              </div>
+            </div>
+            <div class="link-container">
+              <div class="link">
+                <a href="./upcoming-events.html"><img src="./Images/event2.png" alt="" class="icon"></a>
+                <span class="tool-text">Upcoming</span>
+              </div>
+            </div>
+          </div>
+           </div>
+           <div class="link-container">
+            <div class="link">
+              <a href="./register.html"><img src="./Images/regitser.png" alt="" class="icon"></a>
+                      <span class="tool-text">Register</span>
+            </div>
+          </div>
+          <div class="link-container">
+            <div class="link">
+              <a href="./gallery.html"><img src="./Images/gallery.png" alt="" class="icon"></a>
+                      <span class="tool-text">Gallery</span>
+            </div>
+          </div>
+          <div class="link-container">
+            <div class="link">
+              <a href="./feedback.html"><img src="./Images/feedback.png" alt="" class="icon"></a>
+                      <span class="tool-text">Contact</span>
+            </div>
+          </div>
+          <div class="link-container">
+            <div class="link">
+              <a href="./contact.html"><img src="./Images/contact.png" alt="" class="icon"></a>
+                      <span class="tool-text">Contact</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- main content -->
+      <div class="content">
+        <div class="head">
+          Contact Us
+        </div>
+        <div class="media-container">
+          <div class="phone">
+            <div><img src="./Images/phone.png" alt="" class="media-icon"></div>
+            <div class="detail">Coordinator<br>M.Murali<br>
+              +91 7382323007</div>
+            <div class="detail">
+              Member<br>D.Joel<br>+91 6303632127
+            </div>
+          </div>
+          <div class="mail">
+            <div><img src="./Images/mail.png" alt="" class="media-icon"></div>
+            <div class="c-2">Team<br>
+              clubsapphire01@gmail.com</div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
